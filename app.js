@@ -1,15 +1,11 @@
 // External Dependencies
 var express = require( "express" ),
-    env = (function(){
-      var habitat = require( "habitat" );
-      habitat.load();
-      return new habitat();
-    })();
+    env = require( "./environment" );
 
 // Internal Dependencies
 var site = require( "./site" )( env );
 
-var http = express(),
+var http = express();
 
 http.configure(function() {
   // Conceal the fact we're using nodejs
