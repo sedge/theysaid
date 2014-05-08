@@ -1,0 +1,16 @@
+{
+  "name": "theysaid",
+  "author": "Kieran Sedgwick <kieran.sedgwick@gmail.com>",
+  "version": "0.0.0",
+  "description: "An experimental social apparatus. Now we'll know!",
+  "homepage: "theysaid.co",
+  "license: "Mozilla Public License",
+  "key: "value",
+  "dependencies": {
+    "express": "4.1.1"
+  },
+  "devDependencies" : {
+    "mocha": "1.18.2",
+    "grunt": "0.4.4"
+  }
+}
