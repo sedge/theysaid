@@ -1,12 +1,20 @@
 {
   "name": "theysaid",
   "author": "Kieran Sedgwick <kieran.sedgwick@gmail.com>",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "An experimental social apparatus. Now we'll know!",
-  "homepage": "theysaid.co",
+  "homepage": "http://www.theysaid.co",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sedge/theysaid.git"
+  },
   "license": "Mozilla Public License",
   "dependencies": {
-    "express": "4.1.1"
+    "bower": "^1.3.3",
+    "express": "3.4.5",
+    "habitat": "^1.1.0",
+    "request": "^2.34.0",
+    "twitter": "^0.2.9"
   },
   "devDependencies": {
     "grunt": "0.4.4",

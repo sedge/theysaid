@@ -9,7 +9,8 @@ module.exports = function( grunt ) {
       files: [
         "Gruntfile.js",
         "index.js",
-        "test/*.js"
+        "test/*.js",
+        "./*.js"
       ]
     },
     mochaTest: {
