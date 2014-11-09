@@ -10,14 +10,18 @@
   },
   "license": "Mozilla Public License",
   "dependencies": {
+    "bootstrap": "^3.3.0",
     "bower": "^1.3.3",
     "express": "3.4.5",
     "habitat": "^1.1.0",
+    "jquery": "^2.1.1",
     "request": "^2.34.0",
     "twitter": "^0.2.9"
   },
   "devDependencies": {
     "grunt": "0.4.4",
+    "grunt-browserify": "^3.2.0",
+    "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-mocha-test": "^0.10.2",
     "mocha": "1.18.2"

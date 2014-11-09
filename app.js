@@ -12,8 +12,7 @@ http.configure(function() {
   // Conceal the fact we're using nodejs
   http.disable( "x-powered-by" );
 
-  http.use( express.static( path.join( __dirname, "views" ) ) );
-  http.use( "/bower", express.static( path.join(__dirname, "../../bower_components" )));
+  http.use( express.static( path.join( __dirname, "public" ) ) );
 
   http.use( express.json() );
   http.use( express.logger() );

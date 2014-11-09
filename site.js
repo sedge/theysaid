@@ -11,7 +11,9 @@ module.exports = function( env ){
 
   return {
     index: function( req, res ) {
-      res.render( "./views/index.html" );
+      res.render( "views/index.html", function(err, html) {
+        if (err) return res.json(404, { err: err});
+      });
     },
     tweet: function( req, res ) {
       var tweet = req.body && req.body.message || null;
@@ -25,7 +27,6 @@ module.exports = function( env ){
       }, null, function( data ) {
         res.json( 200, { status: "success" });
       });
-      // TODO: Add queueing functionality
     },
   };
 };
