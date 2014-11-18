@@ -4,7 +4,6 @@ var input = $( "#tweet" );
 $( "#submit" ).click(function( e ) {
 	$.ajax('/tweet', {
 		method: "POST",
-		contentType: "application/json",
 		data: {
 			message: input.val()
 		},

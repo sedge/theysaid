@@ -15,7 +15,7 @@ http.configure(function() {
   http.use( express.static( path.join( __dirname, "public" ) ) );
 
   http.use( express.json() );
-  http.use( express.logger() );
+  http.use( express.bodyParser() );
 });
 
 // Route declaration
