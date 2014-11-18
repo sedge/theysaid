@@ -10,13 +10,8 @@ module.exports = function( env ){
   });
 
   return {
-    index: function( req, res ) {
-      res.render( "views/index.html", function(err, html) {
-        if (err) return res.json(404, { err: err});
-      });
-    },
-    tweet: function( req, res ) {
-      var tweet = req.body && req.body.message || null;
+    tweet: function( req, res ) { debugger;
+      var tweet = req.body && req.body.message;
 
       if ( !tweet ) {
         return res.json( 404, { error: "Why didn't you post a message? :(" });

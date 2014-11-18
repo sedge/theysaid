@@ -5,10 +5,11 @@ var input = $( "#tweet" );
 $( "#submit" ).click(function( e ) {
 	$.ajax('/tweet', {
 		method: "POST",
+		contentType: "application/json",
 		data: {
 			message: input.val()
 		},
-		complete: function( xhr, status ) {
+		success: function( data, status, xhr ) {
 			alert( "You said it!" );
 		},
 		error: function( xhr, status, httpStatus ) {

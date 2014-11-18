@@ -16,26 +16,9 @@ http.configure(function() {
 
   http.use( express.json() );
   http.use( express.logger() );
-
-  // Capture the client's IP
-  http.use(function( req, res, next ) {
-    if ( req.body ) {
-      req.body.ip = req.headers[ "X-Forwarded-For" ] && req.headers[ "X-Forwarded-For" ].split( "," )[0] || req.connection.remoteAddress;
-    }
-
-    next();
-  });
-
-  http.configure( "development", function(){
-    http.use( express.errorHandler({ dumpExceptions: true, showStack: true }) );
-  });
-  http.configure( "production", function(){
-    http.use( express.errorHandler() );
-  });
 });
 
 // Route declaration
-http.get( "/", site.index );
 http.post( "/tweet", site.tweet );
 
 http.listen( env.get( "PORT" ), function() {
